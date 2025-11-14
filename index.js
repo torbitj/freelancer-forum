@@ -18,6 +18,7 @@ const OCCUPATIONS = ["Writer", "Teacher", "Programmer", "Designer", "Engineer"];
 const PRICE_RANGE = { min: 20, max: 200 };
 const NUM_FREELANCERS = 100;
 
+// Helper Functions
 // Make a freelancer object
 const makeFreelancer = () => {
   // Variables to randomly assign name, occupation and rate
@@ -56,3 +57,6 @@ const averageFlRate = (freelancers) => {
 
 // Store average freelancer rate
 state.averageRate = averageFlRate(state.freelancers);
+
+// Component Functions
+// Single Freelancer Component
