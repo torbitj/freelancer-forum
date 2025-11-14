@@ -9,7 +9,10 @@
 const state = {
   // State variable for array of freelancers
   freelancers: [],
-  averageRate: 0
+  // Average rate state variable
+  averageRate: 0,
+  // State variable for array of freelancer rows
+  freelancerRowsArr: []
 }
 
 // === Constants ===
