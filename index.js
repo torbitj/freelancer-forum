@@ -97,13 +97,23 @@ const FreelancerRows = (freelancers) => {
   return newTableBody;
 }
 
+// Create new element for average rate
 const AverageRateEl = () => {
-  const avgRateEl = `<h2>The Average Rate is $${state.averageRate}</h2>`;
+  // Text to display
+  const avgRateText = `The Average Rate is $${state.averageRate}`;
+  // New h2 to hold text
+  const avgRateEl = document.createElement(`h2`);
+  // Fill h2 with text
+  avgRateEl.innerHTML = avgRateText;
+  // Return new h2
   return avgRateEl;
 }
 
+// Render new DOM elements
 const render = () => {
+  // Element to update
   const $app = document.querySelector(`#app`);
+  // Base html to fill element
   $app.innerHTML = `
   <h1>Freelancers Forum</h1>
   <AverageRate></AverageRate>
@@ -116,8 +126,12 @@ const render = () => {
       </tr>
     </thead>
     <tbody id="FreelancerRows"></tbody>
-  </table>`
-  $app.querySelector("#FreelancerRows").replaceWith(FreelancerRows(state.freelancers))
+  </table>`;
+  // Change AverageRate placeholder to actual html element
+  $app.querySelector("AverageRate").replaceWith(AverageRateEl());
+  // Fill the table with new body with all freelancer data
+  $app.querySelector("#FreelancerRows").replaceWith(FreelancerRows(state.freelancers));
 }
 
+// Render to the DOM and display in browser
 render();
