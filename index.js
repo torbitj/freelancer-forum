@@ -97,6 +97,10 @@ const FreelancerRows = (freelancers) => {
   return newTableBody;
 }
 
+const AverageRateEl = () => {
+  
+}
+
 const render = () => {
   const $app = document.querySelector(`#app`);
   $app.innerHTML = `
