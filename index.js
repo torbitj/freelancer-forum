@@ -5,6 +5,12 @@
  * @property {number} rate
  */
 
+// State
+const state = {
+  // State variable for array of freelancers
+  freelancers: []
+}
+
 // === Constants ===
 const NAMES = ["Alice", "Bob", "Carol", "Dave", "Eve"];
 const OCCUPATIONS = ["Writer", "Teacher", "Programmer", "Designer", "Engineer"];
@@ -24,4 +30,10 @@ const makeFreelancer = () => {
   newFreelancer.rate = flRate;
 
   return newFreelancer;
+}
+
+// Initialize freelancers array
+for (let i = 0; i < NUM_FREELANCERS; i++) {
+  const freelancer = makeFreelancer();
+  state.freelancers.push(freelancer);
 }
