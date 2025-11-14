@@ -22,8 +22,8 @@ table {
   border: solid thick black;
   border-radius: 15px;
   width: 35em;
-  background-color: #388D99;
-  font: #101247;
+  background-color: #0F758A;
+  color: #F2F2F2;
   display: grid;
   row-gap: 2em;
   justify-content: center;
