@@ -47,4 +47,8 @@ const averageFlRate = (freelancers) => {
     currTotal += currRate;
     return currTotal;
   }, 0);
+  // Calculate avergage rate
+  const avgRate = allRatesTotal / freelancers.length;
+  // Return average rate
+  return avgRate;
 }
