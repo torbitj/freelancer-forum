@@ -87,7 +87,7 @@ const FreelancerRow = (freelancer) => {
 const FreelancerRows = (freelancers) => {
   // Create new tbody element
   const newTableBody = document.createElement(`tbody`);
-  newTableBody.id(`freelancer-table-body`)
+  newTableBody.id = `freelancer-table-body`;
   // For each freelancer in freelancer array, turn it into a table row and push
   // into freelancers row array
   freelancers.forEach((freelancer) => state.freelancerRowsArr.push(FreelancerRow(freelancer)));
@@ -96,3 +96,23 @@ const FreelancerRows = (freelancers) => {
   // Return new body
   return newTableBody;
 }
+
+const render = () => {
+  const $app = document.querySelector(`#app`);
+  $app.innerHTML = `
+  <h1>Freelancers Forum</h1>
+  <AverageRate></AverageRate>
+  <table>
+    <thead>
+      <tr id="table-head-row">
+        <th>Name</th>
+        <th>Occupation</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+    <tbody id="FreelancerRows"></tbody>
+  </table>`
+  $app.querySelector("#FreelancerRows").replaceWith(FreelancerRows(state.freelancers))
+}
+
+render();
