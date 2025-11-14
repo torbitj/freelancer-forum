@@ -10,6 +10,11 @@ body {
   justify-content: center;
 }
 
+table {
+  display: grid;
+  row-gap: 1em;
+}
+
 #app {
   margin-top: 2em;
   padding-top: 2em;
@@ -19,4 +24,7 @@ body {
   width: 35em;
   background-color: #388D99;
   font: #101247;
+  display: grid;
+  row-gap: 2em;
+  justify-content: center;
 }
