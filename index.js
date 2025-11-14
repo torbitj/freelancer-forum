@@ -112,7 +112,7 @@ const render = () => {
     </thead>
     <tbody id="FreelancerRows"></tbody>
   </table>`
-  $app.querySelector("#FreelancerRows").replaceWith(FreelancerRows())
+  $app.querySelector("#FreelancerRows").replaceWith(FreelancerRows(state.freelancers))
 }
 
 render();
