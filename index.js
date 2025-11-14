@@ -88,3 +88,5 @@ const FreelancerRows = (freelancers) => {
   freelancers.forEach((freelancer) => state.freelancerRowsArr.push(FreelancerRow(freelancer)));
   console.log(state.freelancerRowsArr);
 }
+
+FreelancerRows(state.freelancers)
