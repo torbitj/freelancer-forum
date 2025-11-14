@@ -37,3 +37,9 @@ for (let i = 0; i < NUM_FREELANCERS; i++) {
   const freelancer = makeFreelancer();
   state.freelancers.push(freelancer);
 }
+
+// Write a function to return average rate of all freelancers
+// Pass in freelancer array
+const averageFlRate = (freelancers) => {
+  
+}
