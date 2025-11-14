@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #EBF0FF;
+  display: grid;
+  justify-content: center;
+}
+
+table {
+  display: grid;
+  row-gap: 1em;
+}
+
+#app {
+  margin-top: 2em;
+  padding-top: 2em;
+  box-shadow: 5px 5px 5px #424242;
+  border: solid thick black;
+  border-radius: 15px;
+  width: 35em;
+  background-color: #0F758A;
+  color: #F2F2F2;
+  display: grid;
+  row-gap: 2em;
+  justify-content: center;
+}
