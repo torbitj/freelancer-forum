@@ -13,6 +13,10 @@ body {
 #app {
   margin-top: 2em;
   padding-top: 2em;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px #424242;
+  border: solid thick black;
+  border-radius: 15px;
   width: 35em;
+  background-color: #388D99;
+  font: #101247;
 }
