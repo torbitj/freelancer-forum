@@ -98,7 +98,8 @@ const FreelancerRows = (freelancers) => {
 }
 
 const AverageRateEl = () => {
-  
+  const avgRateEl = `<h2>The Average Rate is $${state.averageRate}</h2>`;
+  return avgRateEl;
 }
 
 const render = () => {
