@@ -8,7 +8,8 @@
 // State
 const state = {
   // State variable for array of freelancers
-  freelancers: []
+  freelancers: [],
+  averageRate: 0
 }
 
 // === Constants ===
@@ -52,3 +53,6 @@ const averageFlRate = (freelancers) => {
   // Return average rate
   return avgRate;
 }
+
+// Store average freelancer rate
+state.averageRate = averageFlRate(state.freelancers);
