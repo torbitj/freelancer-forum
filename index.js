@@ -87,12 +87,12 @@ const FreelancerRow = (freelancer) => {
 const FreelancerRows = (freelancers) => {
   // Create new tbody element
   const newTableBody = document.createElement(`tbody`);
+  newTableBody.id(`freelancer-table-body`)
   // For each freelancer in freelancer array, turn it into a table row and push
   // into freelancers row array
   freelancers.forEach((freelancer) => state.freelancerRowsArr.push(FreelancerRow(freelancer)));
   // For each row, append it to the new bdy
   state.freelancerRowsArr.forEach((row) => newTableBody.append(row));
-  console.log(newTableBody);
+  // Return new body
+  return newTableBody;
 }
-
-FreelancerRows(state.freelancers)
