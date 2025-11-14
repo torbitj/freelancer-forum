@@ -60,7 +60,20 @@ state.averageRate = averageFlRate(state.freelancers);
 
 // Component Functions
 // Single Freelancer Component
-const freelancerTableData = () => {
+const freelancerTableData = (freelancer) => {
+  // Create table row el
   const freelancerTableRow = document.createElement(`tr`);
-  
+  // Add class to table row
+  freelancerTableRow.classList.add(`freelancer-row`)
+  // Loop through object
+  for (property in flObj) {
+    // Create new table data element
+    const freelancerTdEl = document.createElement(`td`);
+    // Add class to table data el
+    freelancerTdEl.classList.add(`freelancer-data`);
+    // Fill table data element with property value
+    freelancerTdEl.innerHTML = `${flObj[property]}`;
+    // Add to table row
+    freelancerTableRow.innerHTML += freelancerTdEl;
+  }
 }
