@@ -96,3 +96,20 @@ const FreelancerRows = (freelancers) => {
   // Return new body
   return newTableBody;
 }
+
+const render = () => {
+  const $app = document.querySelector(`#app`);
+  $app.innerHTML = `
+  <h1>Freelancers Forum</h1>
+  <AverageRate></AverageRate>
+  <table>
+    <thead>
+      <tr id="table-head-row">
+        <th>Name</th>
+        <th>Occupation</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+    <tbody id="FreelancerRows"></tbody>
+  </table>`
+}
