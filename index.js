@@ -63,7 +63,7 @@ state.averageRate = averageFlRate(state.freelancers);
 
 // Component Functions
 // Single Freelancer Component
-const freelancerRow = (freelancer) => {
+const FreelancerRow = (freelancer) => {
   // Create table row el
   const freelancerTableRow = document.createElement(`tr`);
   // Add class to table row
@@ -83,6 +83,8 @@ const freelancerRow = (freelancer) => {
   return freelancerTableRow;
 }
 
-const freelancerRows = () => {
-  
+const FreelancerRows = (freelancers) => {
+  const newTableBody = document.createElement(`tbody`);
+  freelancers.forEach((freelancer) => state.freelancerRowsArr.push(FreelancerRow(freelancer)));
+  console.log(state.freelancerRowsArr);
 }
