@@ -31,3 +31,9 @@ const makeFreelancer = () => {
 
   return newFreelancer;
 }
+
+// Initialize freelancers array
+for (let i = 0; i < NUM_FREELANCERS; i++) {
+  const freelancer = makeFreelancer();
+  state.freelancers.push(freelancer);
+}
