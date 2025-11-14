@@ -18,6 +18,7 @@ const OCCUPATIONS = ["Writer", "Teacher", "Programmer", "Designer", "Engineer"];
 const PRICE_RANGE = { min: 20, max: 200 };
 const NUM_FREELANCERS = 100;
 
+// Helper Functions
 // Make a freelancer object
 const makeFreelancer = () => {
   // Variables to randomly assign name, occupation and rate
@@ -56,3 +57,26 @@ const averageFlRate = (freelancers) => {
 
 // Store average freelancer rate
 state.averageRate = averageFlRate(state.freelancers);
+
+// Component Functions
+// Single Freelancer Component
+const freelancerTableData = (freelancer) => {
+  // Create table row el
+  const freelancerTableRow = document.createElement(`tr`);
+  // Add class to table row
+  freelancerTableRow.classList.add(`freelancer-row`);
+  // Loop through object
+  for (property in freelancer) {
+    // Create new table data element
+    const freelancerTdEl = document.createElement(`td`);
+    // Add class to table data el
+    freelancerTdEl.classList.add(`freelancer-data`);
+    // Fill table data element with property value
+    freelancerTdEl.innerHTML = `${freelancer[property]}`;
+    // Add to table row
+    freelancerTableRow.append(freelancerTdEl);
+  }
+  // Return new row
+  return freelancerTableRow;
+}
+
