@@ -37,3 +37,18 @@ for (let i = 0; i < NUM_FREELANCERS; i++) {
   const freelancer = makeFreelancer();
   state.freelancers.push(freelancer);
 }
+
+// Write a function to return average rate of all freelancers
+// Pass in freelancer array
+const averageFlRate = (freelancers) => {
+  // Loop through and add all rates
+  const allRatesTotal = freelancers.reduce((currTotal, currFL) => {
+    const currRate = currFL.rate;
+    currTotal += currRate;
+    return currTotal;
+  }, 0);
+  // Calculate avergage rate
+  const avgRate = allRatesTotal / freelancers.length;
+  // Return average rate
+  return avgRate;
+}
