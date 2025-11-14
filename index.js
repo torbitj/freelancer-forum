@@ -9,7 +9,10 @@
 const state = {
   // State variable for array of freelancers
   freelancers: [],
-  averageRate: 0
+  // Average rate state variable
+  averageRate: 0,
+  // State variable for array of freelancer rows
+  freelancerRowsArr: []
 }
 
 // === Constants ===
@@ -60,7 +63,7 @@ state.averageRate = averageFlRate(state.freelancers);
 
 // Component Functions
 // Single Freelancer Component
-const freelancerTableData = (freelancer) => {
+const FreelancerRow = (freelancer) => {
   // Create table row el
   const freelancerTableRow = document.createElement(`tr`);
   // Add class to table row
@@ -80,3 +83,16 @@ const freelancerTableData = (freelancer) => {
   return freelancerTableRow;
 }
 
+// Create array of rows to append to new body and return the new body
+const FreelancerRows = (freelancers) => {
+  // Create new tbody element
+  const newTableBody = document.createElement(`tbody`);
+  newTableBody.id(`freelancer-table-body`)
+  // For each freelancer in freelancer array, turn it into a table row and push
+  // into freelancers row array
+  freelancers.forEach((freelancer) => state.freelancerRowsArr.push(FreelancerRow(freelancer)));
+  // For each row, append it to the new bdy
+  state.freelancerRowsArr.forEach((row) => newTableBody.append(row));
+  // Return new body
+  return newTableBody;
+}
