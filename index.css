@@ -15,11 +15,36 @@ table {
   row-gap: 1em;
 }
 
+thead {
+  font-size: 1.25em;
+}
+
+tbody {
+  display: grid;
+  row-gap: 0.5em;
+}
+
+td {
+  width: 100%;
+  font-size: 1.25em; 
+  text-align: center; 
+}
+
+tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.8fr repeat(2, 1fr);
+}
+
+.freelancer-row {
+  border: solid #424242;
+}
+
 #app {
   margin-top: 2em;
-  padding-top: 2em;
+  padding: 2em 0;
   box-shadow: 5px 5px 5px #424242;
-  border: solid thick black;
+  border: solid black;
   border-radius: 15px;
   width: 35em;
   background-color: #0F758A;
