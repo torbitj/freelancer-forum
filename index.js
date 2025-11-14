@@ -76,4 +76,6 @@ const freelancerTableData = (freelancer) => {
     // Add to table row
     freelancerTableRow.innerHTML += freelancerTdEl;
   }
+  // Return new row
+  return freelancerTableRow;
 }
