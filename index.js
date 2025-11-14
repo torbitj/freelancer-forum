@@ -5,6 +5,12 @@
  * @property {number} rate
  */
 
+// State
+const state = {
+  // State variable for array of freelancers
+  freelancers: []
+}
+
 // === Constants ===
 const NAMES = ["Alice", "Bob", "Carol", "Dave", "Eve"];
 const OCCUPATIONS = ["Writer", "Teacher", "Programmer", "Designer", "Engineer"];
