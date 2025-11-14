@@ -21,24 +21,19 @@ thead {
 
 tbody {
   display: grid;
-  row-gap: 1em;
+  row-gap: 0.5em;
 }
 
 td {
-  /* padding: 0.2em; */
   width: 100%;
-  font-size: 1.25em;  
-  text-align: center;
+  font-size: 1.25em; 
+  text-align: center; 
 }
 
 tr {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-th {
-  justify-self: center;
+  grid-template-columns: 0.8fr repeat(2, 1fr);
 }
 
 .freelancer-row {
@@ -47,9 +42,9 @@ th {
 
 #app {
   margin-top: 2em;
-  padding-top: 2em;
+  padding: 2em 0;
   box-shadow: 5px 5px 5px #424242;
-  border: solid thick black;
+  border: solid black;
   border-radius: 15px;
   width: 35em;
   background-color: #0F758A;
