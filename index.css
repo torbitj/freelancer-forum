@@ -19,8 +19,30 @@ thead {
   font-size: 1.25em;
 }
 
+tbody {
+  display: grid;
+  row-gap: 1em;
+}
+
 td {
-  font-size: 1.25em;
+  /* padding: 0.2em; */
+  width: 100%;
+  font-size: 1.25em;  
+  text-align: center;
+}
+
+tr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+th {
+  justify-self: center;
+}
+
+.freelancer-row {
+  border: solid #424242;
 }
 
 #app {
@@ -35,17 +57,4 @@ td {
   display: grid;
   row-gap: 2em;
   justify-content: center;
-}
-
-tr {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1em;
-}
-
-th,
-td {
-  justify-self: center;
-  width: max-content;
 }
