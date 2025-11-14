@@ -64,7 +64,7 @@ const freelancerTableData = (freelancer) => {
   // Create table row el
   const freelancerTableRow = document.createElement(`tr`);
   // Add class to table row
-  freelancerTableRow.classList.add(`freelancer-row`)
+  freelancerTableRow.classList.add(`freelancer-row`);
   // Loop through object
   for (property in freelancer) {
     // Create new table data element
@@ -74,10 +74,9 @@ const freelancerTableData = (freelancer) => {
     // Fill table data element with property value
     freelancerTdEl.innerHTML = `${freelancer[property]}`;
     // Add to table row
-    freelancerTableRow.innerHTML += freelancerTdEl;
+    freelancerTableRow.append(freelancerTdEl);
   }
   // Return new row
   return freelancerTableRow;
 }
 
-console.log(freelancerTableData(state.freelancers[2]));
