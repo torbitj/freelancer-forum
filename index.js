@@ -122,7 +122,7 @@ const render = () => {
       <tr id="table-head-row">
         <th>Name</th>
         <th>Occupation</th>
-        <th>Rate ($)</th>
+        <th>Rate</th>
       </tr>
     </thead>
     <tbody id="FreelancerRows"></tbody>
