@@ -27,6 +27,7 @@ const makeFreelancer = () => {
   // Variables to randomly assign name, occupation and rate
   const flNameIndex = Math.floor(Math.random() * NAMES.length);
   const flOccupationIndex = Math.floor(Math.random() * OCCUPATIONS.length);
+  // Pull values from PRICE_RANGE object through destructuring
   const { min, max } = PRICE_RANGE;
   const flRate = Math.floor(Math.random() * (max - min) + min);
 
@@ -48,9 +49,8 @@ for (let i = 0; i < NUM_FREELANCERS; i++) {
 // Pass in freelancer array
 const averageFlRate = (freelancers) => {
   // Loop through and add all rates
-  const allRatesTotal = freelancers.reduce((currTotal, currFL) => {
-    const currRate = currFL.rate;
-    currTotal += currRate;
+  const allRatesTotal = freelancers.reduce((currTotal, {rate}) => {
+    currTotal += rate;
     return currTotal;
   }, 0);
   // Calculate avergage rate
