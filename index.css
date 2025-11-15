@@ -1,8 +1,10 @@
+/* Root to remove styling */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Elements */
 body {
   height: 100vh;
   background-color: #EBF0FF;
@@ -41,6 +43,7 @@ td {
   border: solid #EBF0FF;
 }
 
+/* IDs */
 #app {
   margin-top: 2em;
   padding: 2em 0;
@@ -59,6 +62,7 @@ td {
   ". table .";
 }
 
+/* Pseudo */
 tr:nth-child(even) {
   background-color: #0C5E6E;
 }
