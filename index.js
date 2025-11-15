@@ -27,7 +27,8 @@ const makeFreelancer = () => {
   // Variables to randomly assign name, occupation and rate
   const flNameIndex = Math.floor(Math.random() * NAMES.length);
   const flOccupationIndex = Math.floor(Math.random() * OCCUPATIONS.length);
-  const flRate = Math.floor(Math.random() * (PRICE_RANGE.max - PRICE_RANGE.min) + PRICE_RANGE.min);
+  const { min, max } = PRICE_RANGE;
+  const flRate = Math.floor(Math.random() * (max - min) + min);
 
   const newFreelancer = {}
   newFreelancer.name = NAMES[flNameIndex];
