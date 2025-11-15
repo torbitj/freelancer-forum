@@ -32,7 +32,7 @@ const makeFreelancer = () => {
   const newFreelancer = {}
   newFreelancer.name = NAMES[flNameIndex];
   newFreelancer.occupation = OCCUPATIONS[flOccupationIndex];
-  newFreelancer.rate = `$${flRate}`;
+  newFreelancer.rate = flRate;
 
   return newFreelancer;
 }
@@ -75,7 +75,11 @@ const FreelancerRow = (freelancer) => {
     // Add class to table data el
     freelancerTdEl.classList.add(`freelancer-data`);
     // Fill table data element with property value
-    freelancerTdEl.innerHTML = `${freelancer[property]}`;
+    if (property === `rate`) {
+      freelancerTdEl.innerHTML = `$${freelancer[property]}`;
+    } else {
+      freelancerTdEl.innerHTML = `${freelancer[property]}`;
+    }
     // Add to table row
     freelancerTableRow.append(freelancerTdEl);
   }
