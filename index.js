@@ -32,7 +32,7 @@ const makeFreelancer = () => {
   const newFreelancer = {}
   newFreelancer.name = NAMES[flNameIndex];
   newFreelancer.occupation = OCCUPATIONS[flOccupationIndex];
-  newFreelancer.rate = flRate;
+  newFreelancer.rate = `$${flRate}`;
 
   return newFreelancer;
 }
